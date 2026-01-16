@@ -331,3 +331,55 @@ footer a:hover {
     40% {transform: translateX(8px);}
     60% {transform: translateX(5px);}
 }
+
+
+
+
+@media (max-width: 768px) {
+    /* Reset kontejneru */
+    .photos, .designes {
+        height: auto; /* Automatická výška místo 700vh */
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-bottom: 50px;
+        overflow-x: hidden; /* Pojistka proti přetečení */
+    }
+
+    /* Reset nadpisů */
+    .photos h2, .designes h2 {
+        margin: 30px 0;
+        text-align: center;
+    }
+
+    /* RESET OBRÁZKŮ */
+    .photos .img-block, 
+    .photos .img-block.S, 
+    .photos .img-block.V, 
+    .photos .img-block.C {
+        position: relative; /* Místo absolute */
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: none !important; /* ZRUŠÍ ROTACI I MĚŘÍTKO */
+        
+        width: 90%; /* Šířka přes celou obrazovku s okrajem */
+        max-width: 500px;
+        margin: 0 auto; /* Vycentrování */
+        z-index: 1;
+    }
+
+    /* Úprava design sekce */
+    .designes .img-block {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Header na mobilu - zmenšit */
+    header a {
+        font-size: 1rem;
+        padding: 8px 15px;
+        animation: none; /* Vypnout animaci, na mobilu může rušit */
+    }
+}

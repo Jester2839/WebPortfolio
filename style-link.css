@@ -323,3 +323,54 @@ footer a:hover {
     40% {transform: translateX(8px);}
     60% {transform: translateX(5px);}
 }
+
+
+
+
+@media (max-width: 768px) {
+    /* Rozložení */
+    body {
+        grid-template-rows: auto 1fr auto;
+    }
+
+    main {
+        padding-top: 80px; /* Místo pro fixní header */
+    }
+
+    /* Header tlačítko "Back" */
+    header a {
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%); /* Vycentrovat tlačítko */
+        width: 90%;
+        box-sizing: border-box;
+        margin: 0;
+        animation: none;
+    }
+
+    /* Sociální sítě */
+    .links {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .links > div {
+        width: 100%;
+    }
+
+    /* Formulář */
+    .row.justify-content-center {
+        margin: 0;
+        padding: 0 15px;
+    }
+    
+    .col-md-8, .col-lg-6 {
+        width: 100%;
+        padding: 0;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
