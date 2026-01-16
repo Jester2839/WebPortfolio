@@ -182,7 +182,9 @@ header{
     background-color: var(--font-yellow);
     padding: 10px 20px;
     border-radius: 50px;
-    }
+
+    z-index: 4;
+}
 .CV-button a{
     text-decoration: none;
     color: var(--bg-black);
@@ -362,7 +364,7 @@ main{
     flex: 1;
     height: auto;
     width: 31.25vh;
-    min-width: 300px;
+    min-width: 250px;
     max-width: 400px;
 
     display: flex;
@@ -815,14 +817,17 @@ footer a:hover {
 }
 
 
-/* 1. HAMBURGER MENU (CSS ONLY) */
+
+
+
+/* HAMBURGER MENU */
 #menu-toggle {
-    display: none; /* Skryjeme checkbox */
+    display: none;
 }
 
 /* Tlačítko hamburgeru */
 .hamburger-btn {
-    display: none; /* Na PC skryté */
+    display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -844,6 +849,9 @@ footer a:hover {
 #menu-toggle:checked ~ .hamburger-btn .ph-list { display: none; }
 #menu-toggle:checked ~ .hamburger-btn .ph-x { display: block; }
 
+
+
+
 @media (max-width: 768px) {
     /* Zobrazit tlačítko menu */
     .hamburger-btn {
@@ -853,18 +861,20 @@ footer a:hover {
     /* Stylování rozbaleného menu */
     .menu {
         position: fixed;
-        bottom: 90px; /* Nad tlačítkem */
+        bottom: 90px;
         left: auto;
         right: 20px;
-        transform: translate(0, 20px); /* Výchozí stav - mírně posunuté */
+        transform: translate(0, 20px); 
         flex-direction: column;
         align-items: flex-end;
         background-color: transparent;
         backdrop-filter: none;
         box-shadow: none;
-        pointer-events: none; /* Aby nešlo klikat když je skryté */
+        pointer-events: none;
         opacity: 0;
         transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+        border-radius: 0;
     }
 
     /* Odkazy v menu */
@@ -875,6 +885,10 @@ footer a:hover {
         transform: translateX(100px); /* Odletí doprava */
         transition: all 0.4s ease;
         opacity: 0;
+
+        width: 110px;
+
+        justify-content: center;
     }
 
     /* Když je zaškrtnuto (menu otevřeno) */
@@ -887,6 +901,7 @@ footer a:hover {
     #menu-toggle:checked ~ .menu a {
         transform: translateX(0);
         opacity: 1;
+
     }
     
     /* Postupné nabíhání položek menu */
@@ -901,6 +916,11 @@ footer a:hover {
         grid-template-rows: auto auto auto; /* Hero se přizpůsobí obsahu */
         height: auto;
     }
+    .big-card{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
 
     /* HERO SEKCE */
     .hero {
@@ -908,69 +928,59 @@ footer a:hover {
         padding: 20px;
         height: auto;
         padding-top: 100px;
-        text-align: center;
-    }
-    
+    } 
     .status-box {
-        position: relative;
-        margin: 0 auto 20px auto;
-        justify-content: center;
+        transform: scale(0.7);
+        margin: 8px;
+        margin-left: 0;
     }
-
-    .CV-button {
-        position: relative;
-        top: auto;
-        right: auto;
-        margin: 20px auto;
-        width: fit-content;
+    .CV-button .T, .CV-button i{
+        display: none;
     }
-
+    .CV-button{
+        font-weight: bold;
+        padding: 5px 10px;
+    }
     .hero-txt {
-        align-items: center;
         width: 100%;
     }
-
     .name-wrapper h1 {
-        font-size: 15vw; /* Menší font pro jméno */
+        font-size: 18vw;
     }
-
-    .animovany-txt {
-        justify-content: center;
-    }
-
     .strucne-info {
-        grid-template-columns: 1fr; /* Pod sebe */
         gap: 15px;
-        justify-items: center;
+        grid-template-columns: 1fr;
+    }
+    .hero-img img {
+        left: 30%;
+        transform: none;
+        width: 110%;
+        height: auto;
+    }
+    .kolo1{
+        width: 60vw;
     }
 
-    /* Skrytí nebo úprava postavy na mobilu, aby nepřekážela */
-    .hero-img img {
-        position: relative;
-        left: auto;
-        transform: none;
-        width: 80%;
-        height: auto;
-        margin-top: 30px;
-        opacity: 0.6;
-    }
 
     /* SUMMARY */
     .summary .cards-container {
         flex-direction: column;
         align-items: center;
-        margin: 20px;
+        margin: 10px;
+        gap: 10px;
     }
     
     .summary .card {
         width: 100%;
         max-width: 100%;
         box-sizing: border-box;
+        min-width: 0;
     }
     
     .summary img {
         display: none; /* Logo delty na pozadí může na mobilu rušit */
     }
+
 
     /* SKILLS */
     .skills .apps {
