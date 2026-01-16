@@ -12,6 +12,7 @@
     --box-shadow: 5px 10px 10px rgba(0,0,0,0.3);
     
     --h2-size: clamp(2rem, 6vw, 5rem);
+    --h3-size: clamp(1.6rem, 4vw, 2.8rem);
     --h4-size: clamp(1.4rem, 3vw, 2rem);
     --p-size: clamp(1rem, 2.5vw, 1.4rem);
     --span-size: clamp(0.9rem, 2vw, 1.2rem);
@@ -55,80 +56,88 @@ h2{
 }
 
 
-header {
+/* hlavicka */
+header{
     grid-area: Hero;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
     position: relative;
 }
-
-header a {
+header a{
     margin: 0;
+    margin-left: 1vw;
+
     color: var(--font-white);
-    font-size: 1.2rem;
+    font-size: var(--h4-size);
     text-decoration: none;
-    font-weight: bold;
 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
 
-    padding: 10px 25px;
+    padding: 10px 20px;
     border-radius: 50px;
-    transition: var(--najeti);
 
-    /* Plovoucí pozice */
+    transition: var(--najeti);
+    animation: bounceX 2s infinite;
+
     position: fixed;
-    top: 20px;
+    top: 10px;
     left: 20px;
-    z-index: 1000;
+
+    z-index: 100;
 
     background-color: var(--bg-transparent);
     backdrop-filter: blur(10px);
     box-shadow: var(--box-shadow);
 }
-
-header a:hover {
+header a i{
+    width: 10px;
+    height: auto;
+}
+header a:hover{
     background-color: var(--font-yellow);
     color: var(--bg-black);
     transform: translateY(-3px);
 }
 
-/* =========================================
-   3. HLAVNÍ OBSAH (MAIN)
-   ========================================= */
-main.content-wrapper {
+
+main{
     grid-area: Main;
-    padding-top: 50px; /* Odstup od horního okraje */
+    padding-top: 50px;
     padding-bottom: 50px;
 }
 
 /* Nadpisy obecně */
 h2 {
+    font-size: var(--h3-size);
     color: var(--font-yellow);
     text-align: center;
     margin-bottom: 30px;
     font-weight: bold;
 }
 
-/* --- Sekce Socials (Odkazy) --- */
+/* socials */
 .links {
-    margin-bottom: 80px; /* Odstup od formuláře */
+    margin-bottom: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Kontejner pro tlačítka odkazů */
+/* tlacitka */
 .links > div {
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: 100%;
-    max-width: 500px; /* Maximální šířka tlačítek */
+    max-width: 500px;
 }
-
-/* Samotná tlačítka odkazů */
 .links a {
     display: flex;
     align-items: center;
@@ -142,11 +151,11 @@ h2 {
     
     color: var(--font-white);
     background-color: var(--bg-transparent);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* border: 1px solid rgba(255, 255, 255, 0.1); */
     border-radius: 10px;
     
     transition: var(--najeti);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    box-shadow: var(--box-shadow);
 }
 
 .links a i {
@@ -157,23 +166,18 @@ h2 {
     background-color: var(--font-yellow);
     color: var(--bg-black);
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(255, 209, 0, 0.2);
+    /* box-shadow: 0 8px 15px rgba(255, 209, 0, 0.2); */
 }
 
-/* =========================================
-   4. FORMULÁŘ (Bootstrap Overrides)
-   ========================================= */
 
-/* Popisky polí */
+/* bootstrap */
 .form-label {
     color: var(--font-white);
     margin-left: 5px;
 }
-
-/* Inputy a Textarea */
 .form-control.custom-input {
     background-color: var(--bg-transparent);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--font-yellow);
     color: var(--font-white);
     padding: 12px;
     border-radius: 8px;
@@ -182,7 +186,7 @@ h2 {
 .form-control.custom-input:focus {
     background-color: rgba(255, 255, 255, 0.05);
     border-color: var(--font-yellow);
-    box-shadow: 0 0 0 0.25rem rgba(255, 209, 0, 0.25);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     color: var(--font-white);
 }
 
@@ -190,9 +194,9 @@ h2 {
     color: rgba(232, 232, 232, 0.5);
 }
 
-/* --- Oprava Datumovky (Date Picker) --- */
 input[type="date"].custom-input {
-    color-scheme: dark; /* Tmavý kalendář po rozkliknutí */
+    color-scheme: dark;
+    color: rgba(232, 232, 232, 0.5);
 }
 
 /* Přebarvení ikonky kalendáře na bílo */
@@ -216,14 +220,13 @@ input[type="date"].custom-input::-webkit-calendar-picker-indicator:hover {
 }
 
 .btn-warning:hover {
-    background-color: var(--kolo-orange) !important;
-    color: white !important;
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.05);
 }
 
-/* =========================================
-   5. FOOTER (Identický s galerií)
-   ========================================= */
+
+
+
+/* footer */
 footer {
     grid-area: Foot;
     background-color: var(--bg-black);
@@ -233,25 +236,21 @@ footer {
     line-height: 1.6;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
-
 .footer-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 40px;
 }
-
 .footer-column {
     flex: 1;
     min-width: 250px;
 }
-
 .footer-column h3, 
 .footer-column h4 {
     color: var(--font-yellow);
@@ -261,27 +260,27 @@ footer {
 
 .footer-column h3 { font-size: 1.4rem; }
 .footer-column h4 { font-size: 1.1rem; letter-spacing: 1px; }
-
 .footer-column ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
 .footer-column ul li {
     margin-bottom: 10px;
 }
-
-footer a {
+footer a{
     color: var(--font-white);
     text-decoration: none;
     transition: color 0.3s ease;
-}
 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
 footer a:hover {
     color: var(--font-yellow);
 }
-
 .contact-btn {
     display: inline-block;
     margin-top: 15px;
@@ -289,13 +288,11 @@ footer a:hover {
     font-weight: bold;
     border-bottom: 2px solid var(--font-yellow);
 }
-
 .footer-divider {
     border: 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin: 40px 0 20px;
 }
-
 .footer-bottom {
     display: flex;
     justify-content: space-between;
@@ -303,7 +300,6 @@ footer a:hover {
     font-size: 13px;
     opacity: 0.8;
 }
-
 .footer-bottom .legal-links {
     display: flex;
     flex-direction: row;
@@ -320,4 +316,10 @@ footer a:hover {
         text-align: center;
         gap: 10px;
     }
+}
+
+@keyframes bounceX {
+    0%, 20%, 50%, 80%, 100% {transform: translateX(0);}
+    40% {transform: translateX(8px);}
+    60% {transform: translateX(5px);}
 }
