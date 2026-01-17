@@ -10,13 +10,14 @@
     --box-shadow: 5px 10px 10px rgba(0,0,0,0.3);
     --img-border: solid 2px var(--font-yellow);
 
-    --h2-size: clamp(2rem, 6vw, 5rem);
+    --h2-size: clamp(3.5rem, 6vw, 8rem);
     --h3-size: clamp(1.6rem, 4vw, 2.8rem);
     --h4-size: clamp(1.4rem, 3vw, 2rem);
     --p-size: clamp(1rem, 2.5vw, 1.4rem);
     --span-size: clamp(0.9rem, 2vw, 1.2rem);
 
     --najeti: all 0.4s ease;
+    --mala-anim: 3s ease-in-out infinite;
 }
 
 html{
@@ -36,7 +37,7 @@ body{
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 95vh 1fr auto;
+    grid-template-rows: 100vh 1fr auto;
     grid-template-areas: 
     "Hero"
     "Main"
@@ -109,7 +110,7 @@ header{
     transform: translateX(-50%);
 
     width: auto;
-    height: 80vh;
+    height: 90vh;
 }
 /* uprava textoveho bloku */
 .hero-txt{
@@ -158,6 +159,8 @@ header{
 
     font-size: 0.9rem;
 
+    animation: grow var(--mala-anim);
+
     span{
         margin: 0;
     }
@@ -184,6 +187,9 @@ header{
     border-radius: 50px;
 
     z-index: 4;
+
+    transition: var(--najeti);
+    animation: levitation var(--mala-anim);
 }
 .CV-button a{
     text-decoration: none;
@@ -192,7 +198,10 @@ header{
     display: flex;
     align-items: center;
     gap: 2px;
-
+}
+.CV-button:hover{
+    transform: translateY(-5px);
+    background-color: var(--font-white);
 }
 .CV-button a i{
     font-size: 1.3rem;
@@ -264,6 +273,8 @@ header{
     box-shadow: var(--box-shadow);
 
     overflow: hidden;
+
+    animation: levitation var(--mala-anim);
 }
 .menu a{
     display: flex;
@@ -289,6 +300,31 @@ header{
 .menu a span{
     white-space: nowrap;
 }
+/* HAMBURGER MENU */
+#menu-toggle {
+    display: none;
+}
+.hamburger-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1001;
+    background-color: var(--font-yellow);
+    color: var(--bg-black);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    font-size: 1.5rem;
+}
+.hamburger-btn .ph-x { display: none; }
+#menu-toggle:checked ~ .hamburger-btn .ph-list { display: none; }
+#menu-toggle:checked ~ .hamburger-btn .ph-x { display: block; }
+
 
 
 /* MAIN SEKCE */
@@ -671,7 +707,7 @@ main{
 
     z-index: 50;
 
-    animation: levitation 3s ease-in-out infinite;
+    animation: levitation var(--mala-anim);
     transition: var(--najeti);
 }
 .prace .bttn i{
@@ -804,49 +840,27 @@ footer a:hover {
 
 @keyframes levitation{
     0% {
-        transform: translateY(0px);
+        translate: 0px 0px;
     }
     50% {
-        transform: translateY(-3px);
+        translate: 0px -3px;
     }
     100% {
-        transform: translateY(0px);
+        translate: 0px 0px;
     }
 }
 
-
-
-
-
-/* HAMBURGER MENU */
-#menu-toggle {
-    display: none;
+@keyframes grow{
+    0% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.05;
+    }
+    100% {
+        scale: 1;
+    }
 }
-
-/* Tlačítko hamburgeru */
-.hamburger-btn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1001;
-    background-color: var(--font-yellow);
-    color: var(--bg-black);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: var(--box-shadow);
-    font-size: 1.5rem;
-}
-
-/* Přepínání ikon (hamburger vs křížek) */
-.hamburger-btn .ph-x { display: none; }
-#menu-toggle:checked ~ .hamburger-btn .ph-list { display: none; }
-#menu-toggle:checked ~ .hamburger-btn .ph-x { display: block; }
-
 
 
 @media(max-width: 1000px){

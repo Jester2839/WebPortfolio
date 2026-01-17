@@ -10,8 +10,7 @@
     --box-shadow: 5px 10px 10px rgba(0,0,0,0.3);
     --img-border: solid 2px var(--font-yellow);
 
-    --h2-size: clamp(2rem, 6vw, 5rem);
-    --h3-size: clamp(1.6rem, 4vw, 2.8rem);
+    --h2-size: clamp(3.5rem, 6vw, 8rem);
     --h4-size: clamp(1.4rem, 3vw, 2rem);
     --p-size: clamp(1rem, 2.5vw, 1.4rem);
     --span-size: clamp(0.9rem, 2vw, 1.2rem);
@@ -97,9 +96,9 @@ header a i{
     height: auto;
 }
 header a:hover{
-    background-color: var(--font-yellow);
+    background-color: var(--font-white);
     color: var(--bg-black);
-    transform: translateY(-3px);
+    transform: scale(1.02);
 }
 
 /* nadpisi */
@@ -145,7 +144,7 @@ header a:hover{
     margin: 1vw 0 0 8vw;
 }
 /* obrazky */
-.photos .img-block, .designes .img-block{
+.img-block{
     position: absolute;
 
     display: flex;
@@ -158,6 +157,8 @@ header a:hover{
     border-radius: 5px;
 
     padding: 10px;
+
+    transition: var(--najeti);
 }
 .photos .img-block img, .designes .img-block img{
     height: auto;
@@ -166,10 +167,6 @@ header a:hover{
 
     border-radius: 2px;
 
-    filter: brightness(0.9);
-    transition: 0.3s ease;
-}
-.photos .img-block img:hover{
     filter: brightness(0.9);
 }
 .photos .img-block span, .designes .img-block span{
@@ -206,6 +203,15 @@ header a:hover{
 .photos .img-block:nth-child(15){ top: 78%; left: 35%; transform: rotate(1deg) scale(1); }
 .photos .img-block:nth-child(16){ bottom: 12%; left: 3%; transform: rotate(0.5deg) scale(1.2); }
 .photos .img-block:nth-child(17){ bottom: 3%; left: 50%; transform: rotate(0deg) translateX(-50%) scale(2); }
+
+.photos .img-block:hover {
+    scale: 1.01;
+    rotate: 0.5deg;
+}
+.designes .img-block:hover{
+    scale: 1.1;
+}
+
 
 /* designy */
 .designes{
@@ -312,8 +318,58 @@ footer a:hover {
     gap: 20px;
 }
 
-/* Responzivita patičky */
+
+@keyframes bounceX {
+    0%, 20%, 50%, 80%, 100% {translate: 0px;}
+    40% {translate: 8px 0px;}
+    60% {translate: 5px 0px;}
+}
+
+
+
+
+
 @media (max-width: 768px) {
+    .photos, .designes {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 50px;
+        overflow-x: hidden;
+    }
+    /* Reset nadpisů */
+    .photos h2, .designes h2 {
+        margin: 20px 0;
+        text-align: center;
+    }
+    /* RESET OBRÁZKŮ */
+    .photos .img-block, 
+    .photos .img-block.S, 
+    .photos .img-block.V, 
+    .photos .img-block.C {
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+        
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto;
+        z-index: 1;
+    }
+    .designes .img-block {
+        width: 100%;
+        margin: 0 auto;
+    }
+    header a {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    /* footer */
     .footer-content {
         flex-direction: column;
     }
@@ -321,65 +377,5 @@ footer a:hover {
         flex-direction: column;
         text-align: center;
         gap: 10px;
-    }
-}
-
-
-
-@keyframes bounceX {
-    0%, 20%, 50%, 80%, 100% {transform: translateX(0);}
-    40% {transform: translateX(8px);}
-    60% {transform: translateX(5px);}
-}
-
-
-
-
-@media (max-width: 768px) {
-    /* Reset kontejneru */
-    .photos, .designes {
-        height: auto; /* Automatická výška místo 700vh */
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        padding-bottom: 50px;
-        overflow-x: hidden; /* Pojistka proti přetečení */
-    }
-
-    /* Reset nadpisů */
-    .photos h2, .designes h2 {
-        margin: 30px 0;
-        text-align: center;
-    }
-
-    /* RESET OBRÁZKŮ */
-    .photos .img-block, 
-    .photos .img-block.S, 
-    .photos .img-block.V, 
-    .photos .img-block.C {
-        position: relative; /* Místo absolute */
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
-        bottom: auto !important;
-        transform: none !important; /* ZRUŠÍ ROTACI I MĚŘÍTKO */
-        
-        width: 90%; /* Šířka přes celou obrazovku s okrajem */
-        max-width: 500px;
-        margin: 0 auto; /* Vycentrování */
-        z-index: 1;
-    }
-
-    /* Úprava design sekce */
-    .designes .img-block {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    /* Header na mobilu - zmenšit */
-    header a {
-        font-size: 1rem;
-        padding: 8px 15px;
-        animation: none; /* Vypnout animaci, na mobilu může rušit */
     }
 }
