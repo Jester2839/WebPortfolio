@@ -18,7 +18,7 @@
     --span-size: clamp(0.9rem, 2vw, 1.2rem);
 
     --najeti: all 0.4s ease;
-    --mala-anim: 3s ease-in-out infinite;
+    --mala-anim: 4s ease-in-out infinite;
 }
 
 html{
@@ -76,7 +76,6 @@ h2{
     left: 5%;
     rotate: 8deg;
     scale: 1.2;
-    animation-delay: 1s;
 }
 .bunkr{
     top: 22%;
@@ -329,6 +328,7 @@ header{
     overflow: hidden;
 
     animation: levitation var(--mala-anim);
+    animation-delay: 3s;
 }
 .menu a{
     display: flex;
@@ -474,6 +474,8 @@ main{
     margin: 0;
 }
 
+
+
 /* skills */
 .skills{
     position: relative;
@@ -510,7 +512,7 @@ main{
     border-radius: 5px;
     box-shadow: var(--box-shadow);
 
-    border: 10px solid var(--bg-transparent);
+    border: 10px solid var(--font-white);
 
     animation: levitation var(--mala-anim);
 }
