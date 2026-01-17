@@ -44,6 +44,8 @@ body {
     overflow-x: hidden;
 
     background-color: var(--bg-black);
+
+    position: relative;
 }
 p{
     line-height: 1.6;
@@ -51,6 +53,48 @@ p{
 h2{
     font-family: "vlastniFont", var(--normal-txt-font);
 }
+
+/* obrazky na pozadi */
+.back-img{
+    position: absolute;
+    z-index: 0;
+
+    height: clamp(250px, 40vw, 500px);
+    width: auto;
+
+    filter: brightness(0.7);
+}
+.back-img img{
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+
+    border: 10px solid var(--font-white);
+
+    animation: levitation var(--mala-anim);
+}
+.kostel3{
+    top: 18%;
+    left: 5%;
+    rotate: 4deg;
+    scale: 1.1;
+}
+.mlha{
+    top: 2%;
+    right: 6%;
+    rotate: -5deg;
+    scale: 1.15;
+}
+.red{
+    top: 55%;
+    right: 6%;
+    rotate: 2deg;
+    scale: 1.2;
+}
+
 
 
 /* hlavicka */
@@ -111,6 +155,8 @@ main{
     grid-area: Main;
     padding-top: 50px;
     padding-bottom: 50px;
+
+    z-index: 2;
 }
 h2 {
     font-size: var(--h3-size);

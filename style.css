@@ -96,7 +96,6 @@ h2{
     rotate: 6deg;
     scale: 1.5;
 
-    opacity: 0;
     animation-delay: 2s;
 }
 
@@ -934,6 +933,11 @@ footer a:hover {
     }
 }
 
+@media (min-width: 1000px){
+    .tucnak{
+        display: none;
+    }
+}
 
 @media (max-width: 768px) {
     /* Zobrazit tlačítko menu */
