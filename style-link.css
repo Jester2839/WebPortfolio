@@ -200,6 +200,7 @@ h2 {
     
     transition: var(--najeti);
     box-shadow: var(--box-shadow);
+    backdrop-filter: blur(10px);
 }
 
 .links a i {
@@ -224,6 +225,8 @@ h2 {
     color: var(--font-white);
     padding: 12px;
     border-radius: 8px;
+    backdrop-filter: blur(10px);
+
 }
 
 .form-control.custom-input:focus {
@@ -375,6 +378,7 @@ footer a:hover {
     }
     main {
         padding-top: 80px;
+        backdrop-filter: blur(10px);
     }
     header a {
         font-size: 1rem;

@@ -106,6 +106,7 @@ h2{
     background-color: var(--bg-transparent);
     box-shadow: var(--box-shadow);
     backdrop-filter: blur(10px);
+    border: var(--bttn-border);
 }
 .BB{
     backdrop-filter: blur(150px);
@@ -210,10 +211,9 @@ header{
     font-size: 0.9rem;
 
     animation: grow var(--mala-anim);
-
-    span{
-        margin: 0;
-    }
+}
+.status-box span{
+    margin: 0;
 }
 .status-box .dot{
     height: 8px;
@@ -334,13 +334,13 @@ header{
     align-items: center;
     gap: 5px;
 
-    padding: 15px 20px;
+    padding: 15px 25px;
     border-radius: 40px;
 
     color: var(--font-white);
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: calc(var(--p-size)*1.15);
 
     transition: var(--najeti);
 }
@@ -1072,7 +1072,7 @@ footer a:hover {
         align-items: center;
     }
     .skills h2{
-        margin-left: 0;
+        margin-left: 20px;
     }
     .skills .apps {
         margin-left: 0;
