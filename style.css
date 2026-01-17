@@ -9,6 +9,7 @@
 
     --box-shadow: 5px 10px 10px rgba(0,0,0,0.3);
     --img-border: solid 2px var(--font-yellow);
+    --bttn-border: 1px solid rgba(255, 255, 255, 0.1);
 
     --h2-size: clamp(3.5rem, 6vw, 8rem);
     --h3-size: clamp(1.6rem, 4vw, 2.8rem);
@@ -35,6 +36,8 @@ html{
 body{
     margin: 0;
 
+    position: relative;
+
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 100vh 1fr auto;
@@ -52,26 +55,70 @@ h2{
     font-family: "vlastniFont", var(--normal-txt-font);
 }
 
+/* fotky na pozadí */
+.back-img{
+    position: absolute;
+    z-index: -1;
+
+    height: clamp(250px, 40vw, 600px);
+    width: auto;
+
+    filter: brightness(0.5);
+}
+.lezec{
+    top: 31%;
+    rotate: -8deg;
+}
+.makro{
+    top: 59%;
+    left: 5%;
+    rotate: 8deg;
+    scale: 1.2;
+}
+.bunkr{
+    top: 22%;
+    right: -20%;
+    rotate: 5deg;
+    scale: 0.7;
+}
+.pole{
+    top: 53.5%;
+    right: -6%;
+    rotate: -7deg;
+    scale: 0.85;
+}
+.tucnak{
+    top: 38%;
+    right: 10%;
+    rotate: 6deg;
+    scale: 1.5;
+
+    opacity: 0;
+}
+
+
 /* obecna karta jako pozadi jednotlivich segmentu*/
 .big-card, .card{
     border-radius: 20px;
     background-color: var(--bg-transparent);
     box-shadow: var(--box-shadow);
+    backdrop-filter: blur(10px);
+}
+.BB{
+    backdrop-filter: blur(150px);
 }
 .big-card{
     margin: 20px;
-    backdrop-filter: blur(150px);
 }
 .card{
     border-radius: 15px;
-    backdrop-filter: blur(10px);
 }
 
 /* HERO SEKCE */
 header{
     grid-area: Hero;
     position: relative;
-    overflow: hidden;
+    /* overflow-x: hidden; */
 }
 .kolo1{
     position: absolute;
@@ -185,6 +232,7 @@ header{
     background-color: var(--font-yellow);
     padding: 10px 20px;
     border-radius: 50px;
+    border: var(--bttn-border);
 
     z-index: 4;
 
@@ -271,6 +319,7 @@ header{
     backdrop-filter: blur(5px);
     border-radius: 50px;
     box-shadow: var(--box-shadow);
+    border: var(--bttn-border);
 
     overflow: hidden;
 
@@ -310,8 +359,9 @@ header{
     bottom: 20px;
     right: 20px;
     z-index: 1001;
-    background-color: var(--font-yellow);
-    color: var(--bg-black);
+    background-color: var(--bg-transparent);
+    color: var(--font-yellow);
+    backdrop-filter: blur(10px);
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -319,6 +369,7 @@ header{
     justify-content: center;
     cursor: pointer;
     box-shadow: var(--box-shadow);
+    border: var(--bttn-border);
     font-size: 1.5rem;
 }
 .hamburger-btn .ph-x { display: none; }
@@ -446,7 +497,7 @@ main{
     height: clamp(300px, 65vh, 620px);
     width: clamp(320px, 40vw, 700px);
 }
-.code-img img{
+.code-img img, .back-img img{
     height: 100%;
     width: 100%;
 
@@ -702,6 +753,7 @@ main{
 
     padding: 10px 40px;
     border-radius: 50px;
+    border: var(--bttn-border);
 
     transform: translateY(0);
 
@@ -715,8 +767,8 @@ main{
     animation: bounce 2s infinite;
 }
 .prace .bttn a:hover {    
-    animation: none;
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    background-color: var(--font-white);
 }
 
 
@@ -867,6 +919,9 @@ footer a:hover {
     .code-img{
         display: none;
     }
+    .tucnak{
+        opacity: 1;
+    }
 }
 
 
@@ -893,8 +948,9 @@ footer a:hover {
         border-radius: 0;
     }
     .menu a {
-        background-color: var(--bg-black);
+        background-color: var(--bg-transparent);
         border: 1px solid var(--font-yellow);
+        backdrop-filter: blur(10px);
         margin-top: 10px;
         transform: translateX(100px);
         transition: all 0.4s ease;

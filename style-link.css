@@ -35,7 +35,7 @@ body {
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 9vh 1fr auto;
+    grid-template-rows: 8vh 1fr auto;
     grid-template-areas: 
     "Hero"
     "Main"
@@ -92,6 +92,9 @@ header a{
     background-color: var(--bg-transparent);
     backdrop-filter: blur(10px);
     box-shadow: var(--box-shadow);
+    border: var(--bttn-border);
+
+    line-height: 1.2;
 }
 header a i{
     width: 10px;

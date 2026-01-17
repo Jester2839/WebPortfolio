@@ -9,6 +9,7 @@
 
     --box-shadow: 5px 10px 10px rgba(0,0,0,0.3);
     --img-border: solid 2px var(--font-yellow);
+    --bttn-border: 1px solid rgba(255, 255, 255, 0.1);
 
     --h2-size: clamp(3.5rem, 6vw, 8rem);
     --h4-size: clamp(1.4rem, 3vw, 2rem);
@@ -90,6 +91,7 @@ header a{
     background-color: var(--bg-transparent);
     backdrop-filter: blur(10px);
     box-shadow: var(--box-shadow);
+    border: var(--bttn-border);
 }
 header a i{
     width: 10px;
