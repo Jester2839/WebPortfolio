@@ -637,6 +637,7 @@ main{
 
 
 
+
 /* MOJE PRACE */
 .prace{
     display: flex;
@@ -944,6 +945,9 @@ footer a:hover {
     .hamburger-btn {
         display: flex;
     }
+    .hamburger-btn i{
+        font-weight: bold;
+    }
     .menu {
         position: fixed;
         bottom: 90px;
@@ -1118,7 +1122,7 @@ footer a:hover {
         clip-path: none;
         padding-bottom: 100px;
         margin-top: 50px;
-        overflow: hidden;
+        /* overflow: hidden; */
     }
     .prace h2{
         margin-left: 30px;
