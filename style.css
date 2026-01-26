@@ -128,7 +128,7 @@ header{
     position: absolute;
     z-index: 1;
 
-    left: 75%;
+    left: 77%;
     top: 5%;
     transform: translateX(-55.5%);
 
@@ -161,7 +161,7 @@ header{
     transform: translateX(-50%);
 
     width: auto;
-    height: 90vh;
+    height: 92vh;
 }
 /* uprava textoveho bloku */
 .hero-txt{
