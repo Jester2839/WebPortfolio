@@ -32,6 +32,8 @@ html{
 
     font-family: var(--normal-txt-font);
     text-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+
+    /* scroll-behavior: smooth; */
 }
 body{
     margin: 0;
@@ -99,7 +101,6 @@ h2{
     animation-delay: 2s;
 }
 
-
 /* obecna karta jako pozadi jednotlivich segmentu*/
 .big-card, .card{
     border-radius: 20px;
@@ -117,6 +118,8 @@ h2{
 .card{
     border-radius: 15px;
 }
+
+
 
 /* HERO SEKCE */
 header{
@@ -306,7 +309,8 @@ header{
 }
 
 
-/* menu */
+
+/* MENU */
 .menu{
     position: fixed;
     bottom: 20px;
@@ -391,6 +395,7 @@ main{
     gap: 20vh;
 }
 
+
 /* summary */
 .summary{
     margin: 20px;
@@ -472,7 +477,6 @@ main{
     font-size: var(--p-size);
     margin: 0;
 }
-
 
 
 /* skills */
@@ -634,8 +638,6 @@ main{
     color: var(--font-yellow);
     font-size: var(--span-size);
 }
-
-
 
 
 /* MOJE PRACE */
@@ -925,18 +927,13 @@ footer a:hover {
 }
 
 
+
 @media(max-width: 1000px){
     .code-img{
         display: none;
     }
     .tucnak{
         opacity: 1;
-    }
-}
-
-@media (min-width: 1000px){
-    .tucnak{
-        display: none;
     }
 }
 
