@@ -241,7 +241,7 @@ header a:hover{
 
 
 /* footer */
-footer {
+/* footer {
     grid-area: Foot;
     background-color: var(--bg-black);
     color: var(--font-white);
@@ -318,7 +318,7 @@ footer a:hover {
     display: flex;
     flex-direction: row;
     gap: 20px;
-}
+} */
 
 
 @keyframes bounceX {

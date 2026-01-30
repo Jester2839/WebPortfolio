@@ -9,7 +9,7 @@
     --box-shadow: 5px 10px 10px rgba(0,0,0,0.3);
     --bttn-border: 1px solid rgba(255, 255, 255, 0.1);
     
-    --h3-size: clamp(1.6rem, 4vw, 2.8rem);
+    --h3-size: clamp(1.6rem, 4vw, 3rem);
     --h4-size: clamp(1.4rem, 3vw, 2rem);
     --p-size: clamp(1rem, 2.5vw, 1.4rem);
     --span-size: clamp(0.9rem, 2vw, 1.2rem);
@@ -29,13 +29,12 @@ html {
     font-family: var(--normal-txt-font);
     text-shadow: 3px 3px 8px rgba(0,0,0,0.3);
 }
-
 body {
     margin: 0;
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 8vh 1fr auto;
+    grid-template-rows: 8vh 100vh auto;
     grid-template-areas: 
     "Hero"
     "Main"
@@ -89,10 +88,10 @@ h2{
     scale: 1.15;
 }
 .red{
-    top: 55%;
-    right: 6%;
+    top: 50%;
+    right: 15%;
     rotate: 2deg;
-    scale: 1.2;
+    scale: 0.9;
 }
 
 
@@ -168,10 +167,11 @@ h2 {
 
 /* socials */
 .links {
-    margin-bottom: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    margin-top: 10%;
 }
 
 /* tlacitka */
@@ -190,7 +190,7 @@ h2 {
     
     padding: 15px 20px;
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: bold;
     text-decoration: none;
     
     color: var(--font-white);
@@ -202,166 +202,15 @@ h2 {
     box-shadow: var(--box-shadow);
     backdrop-filter: blur(10px);
 }
-
 .links a i {
     font-size: 1.5rem;
 }
-
 .links a:hover {
     background-color: var(--font-white);
     color: var(--bg-black);
     transform: translateY(-5px);
 }
 
-
-/* bootstrap */
-.form-label {
-    color: var(--font-white);
-    margin-left: 5px;
-}
-.form-control.custom-input {
-    background-color: var(--bg-transparent);
-    border: 1px solid var(--font-yellow);
-    color: var(--font-white);
-    padding: 12px;
-    border-radius: 8px;
-    backdrop-filter: blur(10px);
-
-}
-
-.form-control.custom-input:focus {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-color: var(--font-yellow);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    color: var(--font-white);
-}
-
-.form-control.custom-input::placeholder {
-    color: rgba(232, 232, 232, 0.5);
-}
-
-input[type="date"].custom-input {
-    color-scheme: dark;
-    color: rgba(232, 232, 232, 0.5);
-}
-
-/* Přebarvení ikonky kalendáře na bílo */
-input[type="date"].custom-input::-webkit-calendar-picker-indicator {
-    filter: invert(1);
-    opacity: 0.6;
-    cursor: pointer;
-}
-input[type="date"].custom-input::-webkit-calendar-picker-indicator:hover {
-    opacity: 1;
-}
-
-/* Tlačítko Odeslat */
-.btn-warning {
-    background-color: var(--font-yellow);
-    border: none;
-    color: var(--bg-black) !important;
-    padding: 12px;
-    font-size: 1.1rem;
-    transition: var(--najeti);
-}
-.btn-warning:hover {
-    transform: translateY(-5px) scale(1.05);
-}
-
-
-
-
-/* footer */
-footer {
-    grid-area: Foot;
-    background-color: var(--bg-black);
-    color: var(--font-white);
-    padding: 60px 0 30px;
-    font-size: 15px;
-    line-height: 1.6;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-.footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 40px;
-}
-.footer-column {
-    flex: 1;
-    min-width: 250px;
-}
-.footer-column h3, 
-.footer-column h4 {
-    color: var(--font-yellow);
-    margin-bottom: 20px;
-    font-weight: 600;
-}
-
-.footer-column h3 { font-size: 1.4rem; }
-.footer-column h4 { font-size: 1.1rem; letter-spacing: 1px; }
-.footer-column ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.footer-column ul li {
-    margin-bottom: 10px;
-}
-footer a{
-    color: var(--font-white);
-    text-decoration: none;
-    transition: color 0.3s ease;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px;
-}
-footer a:hover {
-    color: var(--font-yellow);
-}
-.contact-btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 8px 0;
-    font-weight: bold;
-    border-bottom: 2px solid var(--font-yellow);
-}
-.footer-divider {
-    border: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin: 40px 0 20px;
-}
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 13px;
-    opacity: 0.8;
-}
-.footer-bottom .legal-links {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-/* Responzivita patičky */
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-    }
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-}
 
 @keyframes bounceX {
     0%, 20%, 50%, 80%, 100% {translate: 0px;}
@@ -374,7 +223,7 @@ footer a:hover {
 
 @media (max-width: 768px) {
     body {
-        grid-template-rows: auto 1fr auto;
+        grid-template-rows: auto 100vh auto;
     }
     main {
         padding-top: 80px;
@@ -388,6 +237,8 @@ footer a:hover {
         width: 100%;
         padding: 0 20px;
         box-sizing: border-box;
+
+        margin-top: 40%;
     }
     .links > div {
         width: 100%;
@@ -405,5 +256,14 @@ footer a:hover {
     }
     footer{
         backdrop-filter: blur(10px);
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
     }
 }

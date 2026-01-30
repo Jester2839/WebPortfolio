@@ -12,7 +12,7 @@
     --bttn-border: 1px solid rgba(255, 255, 255, 0.1);
 
     --h2-size: clamp(3.5rem, 6vw, 8rem);
-    --h3-size: clamp(1.6rem, 4vw, 2.8rem);
+    --h3-size: clamp(1.6rem, 4vw, 3rem);
     --h4-size: clamp(1.4rem, 3vw, 2rem);
     --p-size: clamp(1rem, 2.5vw, 1.4rem);
     --span-size: clamp(0.9rem, 2vw, 1.2rem);
@@ -786,7 +786,7 @@ main{
 
 
 /* footer */
-footer {
+/* footer {
     grid-area: Foot;
     background-color: var(--bg-black);
     color: var(--font-white);
@@ -863,7 +863,7 @@ footer a:hover {
     display: flex;
     flex-direction: row;
     gap: 20px;
-}
+} */
 
 
 

@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
 
+    <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="style.css">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="translations.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +24,12 @@
     <div class="back-img bunkr" data-aos="fade-left" data-aos-delay="200"><img src="img/prace/bunkr.jpg" alt=""></div>
     <div class="back-img pole" data-aos="fade-left" data-aos-delay="400"><img src="img/prace/pole-s-bezcem.jpg" alt=""></div>
     <div class="back-img tucnak" data-aos="fade-up"><img src="img/prace/tucnak.jpg" alt=""></div>
+
+    <div class="lang-switch">
+        <button onclick="changeLanguage('en')" class="lang-btn active">EN</button>
+        <span class="divider">|</span>
+        <button onclick="changeLanguage('cs')" class="lang-btn">CZ</button>
+    </div>
 
 
     <header id="home">
@@ -90,23 +98,23 @@
     </label>
     <div class="menu">
         <a href="#home">
-            <i class="ph ph-user"></i> <span>Home</span>
+            <i class="ph ph-user"></i> <span data-lang="menu_home">Home</span>
         </a>
 
         <a href="#sum">
-            <i class="ph ph-scroll"></i> <span>Summary</span>
+            <i class="ph ph-scroll"></i> <span data-lang="menu_summary">Summary</span>
         </a>
 
         <a href="#ski">
-            <i class="ph ph-lightning"></i> <span>Skills</span>
+            <i class="ph ph-lightning"></i> <span data-lang="menu_skills">Skills</span>
         </a>
 
         <a href="Galery.html">
-            <i class="ph ph-briefcase"></i> <span>My work</span>
+            <i class="ph ph-briefcase"></i> <span data-lang="menu_work">My work</span>
         </a>
 
         <a href="link.html">
-            <i class="ph ph-link"></i> <span>Links</span>
+            <i class="ph ph-link"></i> <span data-lang="menu_links">Links</span>
         </a>
     </div>
 
@@ -222,7 +230,7 @@
                     <div class="dot-pos"><div class="dot"></div></div>
                     <div class="text">
                         <p>DELTA Střední škola informatiky a ekonomie</p>
-                        <span>Programming, web development, and graphic design - 2028</span>
+                        <span>Programming, web development, and graphic design - 2024-present</span>
                     </div>
                 </div>
                 
@@ -273,7 +281,7 @@
             <div class="footer-content">
     
                 <div class="footer-column brand">
-                    <h3>Name Name</h3>
+                    <h3>Jakub Novy</h3>
                     <p>I create digital products with an emphasis on functionality and design. I am currently accepting new
                         projects.</p>
                     <a href="mailto:novyja@delta-studenti.cz" class="contact-btn">Mail me</a>
@@ -283,7 +291,7 @@
                     <h4>Follow me</h4>
                     <ul class="social-links">
                         <li class="item">
-                            <a href="https://github.com/Jester2839/WebPortfolio" target="_blank"><i class="ph ph-github-logo"></i><span>GitHub</span></a>
+                            <a href="https://github.com/Jester2839" target="_blank"><i class="ph ph-github-logo"></i><span>GitHub</span></a>
                         </li>
                         <li class="item">
                             <a href="#" target="_blank"><i class="ph ph-instagram-logo"></i><span>Instagram</span></a>
