@@ -19,11 +19,11 @@ const translations = {
         // Summary karty
         "h2_summary": "What am I...",
         "card1_title": "Beginnings and studies",
-        "card1_text": "Provizorni text aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "card1_text": "Provizorni text aaaaaa aaaaaaa aaaaaaaaaaa aaaa aa aaaaaa aaaaaa aaaaaaaa aaaa aaaa",
         "card2_title": "Travels and photographs",
-        "card2_text": "Provizorni text aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "card2_text": "Provizorni text aaaaaa aaaaaaa aaaaaaaaaaa aaaa aa aaaaaa aaaaaa aaaaaaaa aaaa aaaa",
         "card3_title": "Programming and website development",
-        "card3_text": "Provizorni text aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "card3_text": "Provizorni text aaaaaa aaaaaaa aaaaaaaaaaa aaaa aa aaaaaa aaaaaa aaaaaaaa aaaa aaaa",
 
         //skills sekce
         "h2_skills": "What I can do...",
@@ -38,11 +38,11 @@ const translations = {
 
         //work card
         "h2_work": "My Work...",
-        "work_text": "Provizorni text aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "work_text": "Provizorni text aaaaaa aaaaaaa aaaaaaaaaaa aaaa aa aaaaaa aaaaaa aaaaaaaa aaaa aaaa",
         "work_buttn": "See more",
         
         // Footer (společný pro všechny)
-        "footer_desc": "Provizorni text aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "footer_desc": "Provizorni text aaaaaa aaaaaaa aaaaaaaaaaa aaaa aa aaaaaa aaaaaa aaaaaaaa aaaa aaaa",
         "footer_mail": "Mail me",
         "footer_follow": "Follow me",
         
@@ -74,11 +74,11 @@ const translations = {
         // Summary karty
         "h2_summary": "Co jsem zač...",
         "card1_title": "Začátky a studie",
-        "card1_text": "Provizorni text aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "card1_text": "Provizorni text aaaaaa aaaaaaa aaaaaaaaaaa aaaa aa aaaaaa aaaaaa aaaaaaaa aaaa aaaa",
         "card2_title": "Cestování a fotografie",
-        "card2_text": "Provizorni text aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "card2_text": "Provizorni text aaaaaa aaaaaaa aaaaaaaaaaa aaaa aa aaaaaa aaaaaa aaaaaaaa aaaa aaaa",
         "card3_title": "Kód a web designe",
-        "card3_text": "Provizorni text aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "card3_text": "Provizorni text aaaaaa aaaaaaa aaaaaaaaaaa aaaa aa aaaaaa aaaaaa aaaaaaaa aaaa aaaa",
 
         //skills sekce
         "h2_skills": "Co umím...",
@@ -93,11 +93,11 @@ const translations = {
 
         //work card
         "h2_work": "Moje práce...",
-        "work_text": "Provizorni text aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "work_text": "Provizorni text aaaaaa aaaaaaa aaaaaaaaaaa aaaa aa aaaaaa aaaaaa aaaaaaaa aaaa aaaa",
         "work_buttn": "Další",
         
         // Footer (společný pro všechny)
-        "footer_desc": "Provizorni text aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "footer_desc": "Provizorni text aaaaaa aaaaaaa aaaaaaaaaaa aaaa aa aaaaaa aaaaaa aaaaaaaa aaaa aaaa",
         "footer_mail": "Napište mi",
         "footer_follow": "Sledujte mě",
         

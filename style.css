@@ -574,6 +574,8 @@ main{
 }
 .languages .jazyk span{
     font-size: var(--p-size);
+
+    width: 100px;
 }
 .languages .jazyk .skill-lines{
     display: grid;
@@ -1105,6 +1107,9 @@ footer a:hover {
     }
     .languages .jazyk{
         margin: 0;
+    }
+    .languages .jazyk span{
+        width: 70px;
     }
     .education {
         align-items: center;
