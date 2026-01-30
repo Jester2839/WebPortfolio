@@ -1,26 +1,3 @@
-:root{
-    --bg-black: #202020;
-    --bg-transparent: #94949439;
-    --font-white: #E8E8E8;
-    --font-yellow: #FFD100;
-    --kolo-orange: #FF8800;
-
-    --normal-txt-font: 'Roboto', sans-serif; 
-
-    --box-shadow: 5px 10px 10px rgba(0,0,0,0.3);
-    --img-border: solid 2px var(--font-yellow);
-    --bttn-border: 1px solid rgba(255, 255, 255, 0.1);
-
-    --h2-size: clamp(3.5rem, 6vw, 8rem);
-    --h3-size: clamp(1.6rem, 4vw, 3rem);
-    --h4-size: clamp(1.4rem, 3vw, 2rem);
-    --p-size: clamp(1rem, 2.5vw, 1.4rem);
-    --span-size: clamp(0.9rem, 2vw, 1.2rem);
-
-    --najeti: all 0.4s ease;
-    --mala-anim: 4s ease-in-out infinite;
-}
-
 html{
     width: 100%;
     height: 100%;
@@ -164,7 +141,7 @@ header{
     transform: translateX(-50%);
 
     width: auto;
-    height: 92vh;
+    height: 93vh;
 }
 /* uprava textoveho bloku */
 .hero-txt{
@@ -187,8 +164,11 @@ header{
     line-height: 0.8;
 
     font-family: "vlastniFont", var(--normal-txt-font);
-    font-size: clamp(5rem, 12vw, 15rem);
+    font-size: clamp(5rem, 13vw, 20rem);
     /* text-transform: uppercase; */
+}
+.name-wrapper .space{
+    margin-left: 2.6vw;
 }
 .name-wrapper .solid{
     z-index: 1;
@@ -267,7 +247,8 @@ header{
     gap: 10px;
     z-index: 3;
 
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-size: var(--h3-size);
+    margin-left: -1vw;
 }
 .animovany-txt .words{
     display: grid;
@@ -291,17 +272,22 @@ header{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 30px;
-    margin-top: 60px;
+    gap: 10px;
+    margin-top: 8vh;
+    margin-left: 2vw;
     
     font-size: var(--span-size);
 
     z-index: 3;
+
+    width: 90%;
 }
 .strucne-info .info-item{
     display: flex;
     align-items: center;
     gap: 8px;
+
+    margin-top: 30px;
 }
 .strucne-info .info-item i{
     color: var(--font-yellow);
@@ -386,7 +372,8 @@ header{
 .menu .trans{
     gap: 0px;
     padding: 16px 26px;
-    border: var(--bttn-border);
+    border-left: var(--bttn-border);
+    border-radius: 0;
 }
 .menu .trans i{
     translate: 0px 2px;
@@ -1005,6 +992,7 @@ footer a:hover {
 
     .menu .trans {
         border: 1px solid var(--font-yellow);
+        border-radius: 40px;
     }
 }
 

@@ -1,3 +1,27 @@
+:root{
+    --bg-black: #202020;
+    --bg-transparent: #94949439;
+    --font-white: #E8E8E8;
+    --font-yellow: #FFD100;
+    --kolo-orange: #FF8800;
+
+    --normal-txt-font: 'Roboto', sans-serif; 
+
+    --box-shadow: 5px 10px 10px rgba(0,0,0,0.3);
+    --img-border: solid 2px var(--font-yellow);
+    --bttn-border: 1px solid rgba(255, 255, 255, 0.1);
+
+    --h2-size: clamp(3.5rem, 6vw, 8rem);
+    --h3-size: clamp(1.6rem, 4vw, 3rem);
+    --h4-size: clamp(1.4rem, 3vw, 2rem);
+    --p-size: clamp(1rem, 2.5vw, 1.4rem);
+    --span-size: clamp(0.9rem, 2vw, 1.2rem);
+
+    --najeti: all 0.4s ease;
+    --mala-anim: 4s ease-in-out infinite;
+}
+
+
 /* footer */
 footer {
     grid-area: Foot;
