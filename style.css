@@ -10,7 +10,7 @@ html{
     font-family: var(--normal-txt-font);
     text-shadow: 3px 3px 8px rgba(0,0,0,0.3);
 
-    /* scroll-behavior: smooth; */
+    /* scroll-behavior: smooth !important; */
 }
 body{
     margin: 0;
@@ -32,6 +32,9 @@ p{
 }
 h2{
     font-family: "vlastniFont", var(--normal-txt-font);
+}
+body div{
+    scroll-margin-top: 15px;
 }
 
 /* fotky na pozadí */
@@ -132,7 +135,6 @@ header{
 }
 .hero-img img{
     position: absolute;
-    object-fit: cover;
     z-index: 2;
     opacity: 1;
     
@@ -1044,8 +1046,9 @@ footer a:hover {
     .hero-img img {
         left: 30%;
         transform: none;
-        width: 110%;
-        height: auto;
+        width: auto;
+        height: 105%;
+        transform: translateX(-10px);
     }
     .kolo1{
         width: 60vw;

@@ -24,3 +24,30 @@ document.addEventListener('DOMContentLoaded', () => {
     loadComponent('footer-placeholder', 'footer.html'); 
     // Upravte cestu 'footer.html' podle toho, kde soubor leží
 });
+
+
+
+// Jednoduché a spolehlivé plynulé scrollování
+document.addEventListener('click', function(e) {
+    // 1. Najdeme nejbližší odkaz, na který se kliklo
+    const link = e.target.closest('a[href^="#"]');
+    
+    if (link) {
+        // 2. Zastavíme okamžitý skok
+        e.preventDefault();
+
+        // 3. Získáme cíl (např. "#sum")
+        const targetId = link.getAttribute('href');
+        
+        // Pokud je odkaz jen "#", rolujeme nahoru, jinak hledáme element
+        const targetElement = targetId === "#" ? document.body : document.querySelector(targetId);
+
+        // 4. Pokud cíl existuje, plynule k němu dojedeme
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start' // Zarovná element na horní okraj okna
+            });
+        }
+    }
+});
