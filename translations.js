@@ -6,6 +6,7 @@ const translations = {
         "menu_skills": "Skills",
         "menu_work": "My work",
         "menu_links": "Links",
+        // "btn_text": "Cz",
         
         // Hero sekce
         "hero_status": "Open to work",
@@ -20,9 +21,9 @@ const translations = {
         "card1_title": "Beginnings and studies",
         "card1_text": "Provizorni text aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
         "card2_title": "Travels and photographs",
-        "card1_text": "Provizorni text aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        "card2_title": "Programming and website development",
-        "card1_text": "Provizorni text aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "card2_text": "Provizorni text aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "card3_title": "Programming and website development",
+        "card3_text": "Provizorni text aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
 
         //skills sekce
         "h2_skills": "What I can do...",
@@ -48,6 +49,10 @@ const translations = {
         // Odkazy a tlačítka
         "back_home": "Back to Home Page",
         "links": "Can find me here",
+
+        "photo": "Photos",
+        "design": "Designes",
+        "designe_idea": "2025 - Web designe idea",
     },
     cs: {
         // Menu
@@ -56,9 +61,10 @@ const translations = {
         "menu_skills": "Dovednosti",
         "menu_work": "Moje práce",
         "menu_links": "Odkazy",
+        // "btn_text": "En",
         
         // Hero sekce
-        "hero_status": "Volný ke spolupráci",
+        "hero_status": "Otevřený spolupráci",
         "hero_download": "Stáhnout",
         "hero_im": "Jsem",
         "role_1": "Fotograf",
@@ -70,9 +76,9 @@ const translations = {
         "card1_title": "Začátky a studie",
         "card1_text": "Provizorni text aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
         "card2_title": "Cestování a fotografie",
-        "card1_text": "Provizorni text aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        "card2_title": "Kód a web designe",
-        "card1_text": "Provizorni text aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "card2_text": "Provizorni text aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "card3_title": "Kód a web designe",
+        "card3_text": "Provizorni text aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
 
         //skills sekce
         "h2_skills": "Co umím...",
@@ -92,51 +98,56 @@ const translations = {
         
         // Footer (společný pro všechny)
         "footer_desc": "Provizorni text aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        "footer_mail": "Napiš mi",
-        "footer_follow": "Sleduj mě",
+        "footer_mail": "Napište mi",
+        "footer_follow": "Sledujte mě",
         
         // Odkazy a tlačítka
         "back_home": "Zpět na Hlavní stránku",
         "links": "Najdete mě zde",
+
+        "photo": "Fotky",
+        "design": "Grafický designe",
+        "designe_idea": "2025 - Návrh webového designu",
     }
 };
 
 
+// Hlavní funkce pro změnu jazyka
 function changeLanguage(lang) {
-    // 1. Uložit jazyk do prohlížeče
+    // 1. Uložíme volbu do localStorage
     localStorage.setItem('selectedLang', lang);
 
-    // 2. Najít všechny elementy s atributem data-lang
+    // 2. Najdeme všechny prvky s atributem data-lang
     const elements = document.querySelectorAll('[data-lang]');
-
-    elements.forEach(element => {
-        const key = element.getAttribute('data-lang');
-        
-        // Pokud překlad existuje, nahradíme text
-        if (translations[lang][key]) {
-            // Speciální případ pro inputy (např. placeholder v kontaktním formuláři)
-            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                element.placeholder = translations[lang][key];
+    
+    elements.forEach(el => {
+        const key = el.getAttribute('data-lang');
+        // Kontrola, zda překlad existuje
+        if (translations[lang] && translations[lang][key]) {
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.placeholder = translations[lang][key];
             } else {
-                element.innerText = translations[lang][key];
+                el.innerText = translations[lang][key];
             }
         }
     });
 
-    // 3. Zvýraznit aktivní tlačítko (volitelné stylování)
-    updateActiveButton(lang);
+    // 3. Změna textu v tlačítku (CZ/EN)
+    const btnText = document.getElementById('lang-btn-text');
+    if (btnText && translations[lang]['btn_text']) {
+        btnText.innerText = translations[lang]['btn_text'];
+    }
 }
 
-function updateActiveButton(lang) {
-    // Odebrat třídu active všem tlačítkům
-    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-    
-    // Přidat třídu tomu, které odpovídá jazyku (toto je zjednodušené)
-    // Ideálně dej tlačítkům ID nebo kontroluj text
+// Funkce pro přepínání (volaná kliknutím)
+function prepniJazyk() {
+    const currentLang = localStorage.getItem('selectedLang') || 'en';
+    const newLang = (currentLang === 'en') ? 'cs' : 'en';
+    changeLanguage(newLang);
 }
 
-// 4. Načíst jazyk při startu stránky
+// Spuštění po načtení stránky
 document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('selectedLang') || 'en'; // Default je EN
+    const savedLang = localStorage.getItem('selectedLang') || 'en';
     changeLanguage(savedLang);
 });

@@ -352,7 +352,7 @@ header{
     background-color: var(--font-white);
     color: var(--bg-black);
 
-    transform: translateY(-3px);
+    transform: translateY(-1px);
 }
 .menu a span{
     white-space: nowrap;
@@ -383,6 +383,15 @@ header{
 .hamburger-btn .ph-x { display: none; }
 #menu-toggle:checked ~ .hamburger-btn .ph-list { display: none; }
 #menu-toggle:checked ~ .hamburger-btn .ph-x { display: block; }
+.menu .trans{
+    gap: 0px;
+    padding: 16px 26px;
+    border: var(--bttn-border);
+}
+.menu .trans i{
+    translate: 0px 2px;
+}
+
 
 
 
@@ -424,7 +433,7 @@ main{
 
     margin: 30px 0px 0px 40px;
 
-    transform: rotate(-3deg);
+    rotate: -3deg;
 
 }
 .summary .h2-effect h2{
@@ -565,7 +574,6 @@ main{
 }
 .languages .jazyk span{
     font-size: var(--p-size);
-    width: 60px;
 }
 .languages .jazyk .skill-lines{
     display: grid;
@@ -583,7 +591,7 @@ main{
     opacity: 20%;
 }
 .languages .jazyk .skill-lines .cz{ opacity: 1;}
-.languages .jazyk .skill-lines .en{ opacity: 1;; width: 40%;}
+.languages .jazyk .skill-lines .en{ opacity: 1;; width: 60%;}
 /* Edukace a certifikáty */
 .education{
     display: flex;
@@ -937,7 +945,7 @@ footer a:hover {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 955px){
     /* Zobrazit tlačítko menu */
     .hamburger-btn {
         display: flex;
@@ -991,6 +999,15 @@ footer a:hover {
     #menu-toggle:checked ~ .menu a:nth-child(3) { transition-delay: 0.3s; }
     #menu-toggle:checked ~ .menu a:nth-child(4) { transition-delay: 0.4s; }
     #menu-toggle:checked ~ .menu a:nth-child(5) { transition-delay: 0.5s; }
+    #menu-toggle:checked ~ .menu a:nth-child(6) { transition-delay: 0.6s; }
+
+    .menu .trans {
+        border: 1px solid var(--font-yellow);
+    }
+}
+
+@media (max-width: 768px) {
+    
 
 
 

@@ -25,12 +25,6 @@
     <div class="back-img pole" data-aos="fade-left" data-aos-delay="400"><img src="img/prace/pole-s-bezcem.jpg" alt=""></div>
     <div class="back-img tucnak" data-aos="fade-up"><img src="img/prace/tucnak.jpg" alt=""></div>
 
-    <div class="lang-switch">
-        <button onclick="changeLanguage('en')" class="lang-btn active">EN</button>
-        <span class="divider">|</span>
-        <button onclick="changeLanguage('cs')" class="lang-btn">CZ</button>
-    </div>
-
 
     <header id="home">
         <div class="kolo1"></div>
@@ -40,23 +34,23 @@
             <div class="hero-txt">
                 <div class="status-box">
                     <div class="dot"></div>
-                    <span>Open to work</span>
+                    <span data-lang="hero_status">Open to work</span>
                 </div>
 
                 <div class="CV-button" data-aos="fade-down-left">
                     <a href="#">
                         <i class="ph ph-file-arrow-down"></i>
-                        <span class="T">Download</span>
+                        <span class="T" data-lang="heor_download">Download</span>
                         <span>CV</span>
                     </a>
                 </div>
     
                 <div class="animovany-txt">
-                    <span class="static">I'm</span>
+                    <span class="static" data-lang="hero_im">I'm</span>
                     <div class="words">
-                        <span>Photographer</span>
-                        <span>Web Designer</span>
-                        <span>Coder</span>
+                        <span data-lang="role_1">Photographer</span>
+                        <span data-lang="role_2">Web Designer</span>
+                        <span data-lang="role_3">Coder</span>
                     </div>
                 </div>
     
@@ -77,7 +71,7 @@
                     </div>
                     <div class="info-item" data-aos="fade-right" data-aos-delay="400">
                         <i class="ph ph-phone"></i>
-                        <span class="text">+420 123 456 789</span>
+                        <span class="text">+420 735 795 973</span>
                     </div>
                 </div>
     
@@ -116,32 +110,33 @@
         <a href="link.html">
             <i class="ph ph-link"></i> <span data-lang="menu_links">Links</span>
         </a>
+
+        <a href="javascript:void(0)" onclick="prepniJazyk()" class="trans">
+        <i class="ph ph-translate"></i> <span id="lang-btn-text"></span> </a>
     </div>
 
     <main>
         
         <div class="summary" id="sum">
 
-            <img src="img/logo_delta.png" alt="delta logo">
-
             <div class="h2-effect" data-aos="fade-up">
-                <h2 class="h2-solid">What am I...</h2>
-                <h2 class="h2-transparent">What am I...</h2>
-                <h2 class="h2-transparent">What am I...</h2>
+                <h2 class="h2-solid" data-lang="h2_summary">What am I...</h2>
+                <h2 class="h2-transparent" data-lang="h2_summary">What am I...</h2>
+                <h2 class="h2-transparent" data-lang="h2_summary">What am I...</h2>
             </div>
             
             <div class="cards-container">
                 <div class="card" data-aos="fade-up" data-aos-delay="100">
-                    <h4>Beginnings and studies</h4>
-                    <p>I grew up in Pardubice, and even in high school at DELTA, I enjoyed technology and visual arts. I spent hours programming simple applications and experimenting with websites that I created for friends or school projects. At the same time, I got my first camera and learned to capture the world around me—from everyday life to nature, which fascinated me. School gave me the opportunity to combine technical skills with creativity, which motivated me greatly.</p>
+                    <h4 data-lang="card1_title">Beginnings and studies</h4>
+                    <p data-lang="card1_text">I grew up in Pardubice, and even in high school at DELTA, I enjoyed technology and visual arts. I spent hours programming simple applications and experimenting with websites that I created for friends or school projects. At the same time, I got my first camera and learned to capture the world around me—from everyday life to nature, which fascinated me. School gave me the opportunity to combine technical skills with creativity, which motivated me greatly.</p>
                 </div>
                 <div class="card" data-aos="fade-up" data-aos-delay="400">
-                    <h4>Travels and photographs</h4>
-                    <p>After school, I began combining my two passions—travel and photography. Every weekend, I head to the mountains, where I walk along trails and look for the perfect moments to capture. I photograph not only the beauty of the landscape, but also the atmosphere of the places and the feelings I bring back from my trips. These experiences inspired me to create my own blog and portfolio website, where I can combine visual art with interactive elements and my programming skills.</p>
+                    <h4 data-lang="card2_title">Travels and photographs</h4>
+                    <p data-lang="card2_text">After school, I began combining my two passions—travel and photography. Every weekend, I head to the mountains, where I walk along trails and look for the perfect moments to capture. I photograph not only the beauty of the landscape, but also the atmosphere of the places and the feelings I bring back from my trips. These experiences inspired me to create my own blog and portfolio website, where I can combine visual art with interactive elements and my programming skills.</p>
                 </div>
                 <div class="card" data-aos="fade-up" data-aos-delay="700">
-                    <h4>Programming and website development</h4>
-                    <p>In addition to photography, I also create websites and program. I enjoy creating modern and functional websites for small businesses, artists, or friends, combining aesthetics with technical precision. Thanks to my ability to notice details while also considering the overall user experience, I feel like a versatile creator. To this day, I combine my passion for outdoor activities with digital creation—whether it's a new website, an interactive gallery, or an app that documents my travels and photographs.</p>
+                    <h4 data-lang="card3_title">Programming and website development</h4>
+                    <p data-lang="card3_text">In addition to photography, I also create websites and program. I enjoy creating modern and functional websites for small businesses, artists, or friends, combining aesthetics with technical precision. Thanks to my ability to notice details while also considering the overall user experience, I feel like a versatile creator. To this day, I combine my passion for outdoor activities with digital creation—whether it's a new website, an interactive gallery, or an app that documents my travels and photographs.</p>
                 </div>
             </div>
             
@@ -149,7 +144,7 @@
 
 
         <div class="skills big-card" id="ski">
-            <h2 data-aos="fade-up">What I can do...</h2>
+            <h2 data-aos="fade-up" data-lang="h2_skills">What I can do...</h2>
 
             <div class="code-img" >
                 <img src="img/code_img.png" alt="" data-aos="fade-up-left">
@@ -204,10 +199,10 @@
             </div>
 
             <div class="languages">
-                <h3>Languages</h3>
+                <h3 data-lang="h3_languages">Languages</h3>
 
                 <div class="jazyk">
-                    <span>Czech</span>
+                    <span data-lang="skills_cz">Czech</span>
                     <div class="skill-lines">
                         <div class="line cz" data-aos="fade-right"></div>
                         <div class="line"></div>
@@ -215,7 +210,7 @@
                 </div>
 
                 <div class="jazyk">
-                    <span>English</span>
+                    <span data-lang="skills_en">English</span>
                     <div class="skill-lines">
                         <div class="line en" data-aos="fade-right" data-aos-delay="200"></div>
                         <div class="line"></div>
@@ -224,21 +219,21 @@
             </div>
 
             <div class="education">
-                <h3  data-aos="fade-down">Education & Certificates</h3>
+                <h3  data-aos="fade-down" data-lang="h3_edu">Education & Certificates</h3>
 
                 <div class="record"  data-aos="fade-left">
                     <div class="dot-pos"><div class="dot"></div></div>
                     <div class="text">
-                        <p>DELTA Střední škola informatiky a ekonomie</p>
-                        <span>Programming, web development, and graphic design - 2024-present</span>
+                        <p data-lang="skills_record1">DELTA Střední škola informatiky a ekonomie</p>
+                        <span data-lang="skills_subrecord1">Programming, web development, and graphic design - 2024-present</span>
                     </div>
                 </div>
                 
                 <div class="record" data-aos="fade-right" data-aos-delay="200">
                     <div class="dot-pos"><div class="dot"></div></div>
                     <div class="text" >
-                        <p>Photography workshop in Litomyšl</p>
-                        <span>May 2025</span>
+                        <p data-lang="skills_record2">Photography workshop in Litomyšl</p>
+                        <span data-lang="skills_subrecord2">May 2025</span>
                     </div>
                 </div>
             </div>
@@ -246,9 +241,9 @@
 
 
         <div class="prace big-card">
-            <h2  data-aos="fade-left">My Work...</h2>
+            <h2  data-aos="fade-left" data-lang="h2_work">My Work...</h2>
 
-            <p class="text"  data-aos="fade-right" data-aos-delay="300">In this section, you will find a selection of my photographs and projects that were created on my journey to success. Every shot or design means something to me. I'm trying to combine aesthetics with functionality and seek simple yet striking solutions.</p>
+            <p class="text"  data-aos="fade-right" data-aos-delay="300" data-lang="work_text">In this section, you will find a selection of my photographs and projects that were created on my journey to success. Every shot or design means something to me. I'm trying to combine aesthetics with functionality and seek simple yet striking solutions.</p>
 
 
             <div class="A obdelnik">
@@ -268,49 +263,13 @@
 
             <div class="fog"></div>
             <div class="bttn" data-aos="fade-up" data-aos-delay="600">
-                <a href="Galery.html">See more</a>
+                <a href="Galery.html" data-lang="work_buttn">See more</a>
                 <i class="ph ph-arrow-down"></i>
             </div>
             
         </div>
     </main>
 
-    <!-- <footer>
-        <div class="footer-container">
-    
-            <div class="footer-content">
-    
-                <div class="footer-column brand">
-                    <h3>Jakub Novy</h3>
-                    <p>I create digital products with an emphasis on functionality and design. I am currently accepting new
-                        projects.</p>
-                    <a href="mailto:novyja@delta-studenti.cz" class="contact-btn">Mail me</a>
-                </div>
-    
-                <div class="footer-column socials">
-                    <h4>Follow me</h4>
-                    <ul class="social-links">
-                        <li class="item">
-                            <a href="https://github.com/Jester2839" target="_blank"><i class="ph ph-github-logo"></i><span>GitHub</span></a>
-                        </li>
-                        <li class="item">
-                            <a href="#" target="_blank"><i class="ph ph-instagram-logo"></i><span>Instagram</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-    
-            <hr class="footer-divider">
-    
-            <div class="footer-bottom">
-                <p>@Name Name 2026 - All images are copyrights of their respecitve Owner.</p>
-                <div class="legal-links">
-                    <a href="#">Legal Terms</a>
-                    <a href="#">Privacy Policy</a>
-                </div>
-            </div>
-        </div>
-    </footer> -->
     <div id="footer-placeholder"></div>
     <script src="global.js"></script>
 
