@@ -1165,15 +1165,4 @@ footer a:hover {
         background: transparent;
         box-shadow: none;
     }
-
-
-    /* footer */
-    .footer-content {
-        flex-direction: column;
-    }
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
 }
