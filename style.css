@@ -131,7 +131,7 @@ header{
     align-items: center;
     padding-left: 30px;
 
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .hero-img img{
     position: absolute;
@@ -145,6 +145,13 @@ header{
     width: auto;
     height: 93vh;
 }
+
+/*lyze*/
+.hero-img img{
+    transform: translateX(-50%) scale(1.2) translateY(70px);
+}
+/* lyze */
+
 /* uprava textoveho bloku */
 .hero-txt{
     display: flex;
@@ -264,11 +271,12 @@ header{
     grid-area: 1/1/2/2;
     opacity: 0;
 
-    animation: rollText 6s ease-out infinite;
+    animation: rollText 8s ease-out infinite;
 }
 .animovany-txt .words span:nth-child(1) { animation-delay: 0s;}
 .animovany-txt .words span:nth-child(2) { animation-delay: 2s;}
 .animovany-txt .words span:nth-child(3) { animation-delay: 4s;}
+.animovany-txt .words span:nth-child(4) { animation-delay: 6s;}
 /* strucne info */
 .strucne-info{
     display: grid;
@@ -795,15 +803,15 @@ main{
     opacity: 0;
     transform: translateY(-10px);
   }
-  5% {
+  3% {
     opacity: 1;
     transform: translateY(0px);
   }
-  28% {
+  22% {
     opacity: 1;
     transform: translateY(0px);
   }
-  33% {
+  25% {
     opacity: 0;
     transform: translateY(10px);
   }
@@ -927,8 +935,8 @@ main{
         height: auto;
     }
     .big-card{
-        margin-left: 0px;
-        margin-right: 0px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     main{
         gap: 0px;
@@ -1095,5 +1103,12 @@ main{
         padding: 40px 0;
         background: transparent;
         box-shadow: none;
+    }
+}
+
+/* lyze */
+@media (max-width: 426px) {
+    .hero-img img{
+        transform: translateX(-80px) translateX(-10px);
     }
 }
