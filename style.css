@@ -1110,6 +1110,6 @@ main{
 /* lyze */
 @media (max-width: 440px) {
     .hero-img img{
-        transform: translateX(-175px) translateY(40px) rotate(-7deg) scale(1.05);
+        transform: translateX(-90px) translateY(40px) scale(1.1);
     }
 }
