@@ -140,7 +140,7 @@ header{
     left: 90%;
     top: 40%;
     z-index: 3;
-    opacity: 0.02;
+    opacity: 0.1;
 }
 .hero{
     position: relative;
@@ -252,14 +252,8 @@ header{
 
     font-size: clamp(1rem, 1.5vw, 1.15rem);
 
-    background-color: var(--font-yellow);
-    padding: 10px 20px;
-    border-radius: 50px;
-    border: var(--bttn-border);
-
     z-index: 4;
 
-    transition: var(--najeti);
     animation: levitation var(--mala-anim);
 }
 .CV-button a{
@@ -269,8 +263,15 @@ header{
     display: flex;
     align-items: center;
     gap: 2px;
+
+    background-color: var(--font-yellow);
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: var(--bttn-border);
+
+    transition: var(--najeti);
 }
-.CV-button:hover{
+.CV-button a:hover{
     transform: translateY(-5px);
     background-color: var(--font-white);
 }
@@ -1021,6 +1022,9 @@ main{
     }
     .kolo{
         width: 60vw;
+    }
+    .kolo.B, .kolo.C{
+        width: 45vw;
     }
 
 
