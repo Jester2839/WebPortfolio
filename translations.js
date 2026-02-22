@@ -39,11 +39,11 @@ const translations = {
 
         //work card
         "h2_work": "My Work...",
-        "work_text": "Provizorni text aaaaaa aaaaaaa aaaaaaaaaaa aaaa aa aaaaaa aaaaaa aaaaaaaa aaaa aaaa",
+        "work_text": "If you asked me what I like to photograph, I wouldn't know how to answer. I just photograph whatever comes my way. When I'm in the mountains, I photograph nature or wildlife; when I'm in the city, I photograph street and architecture; when I find myself at a graduation party, I just photograph the graduation party. In short, I photograph everything that can and cannot be photographed.",
         "work_buttn": "See more",
         
         // Footer (společný pro všechny)
-        "footer_desc": "Provizorni text aaaaaa aaaaaaa aaaaaaaaaaa aaaa aa aaaaaa aaaaaa aaaaaaaa aaaa aaaa",
+        "footer_desc": "This website was created as part of a school project and serves primarily as a showcase of my skills and personal development. If you are interested in working with me, please do not hesitate to contact me.",
         "footer_mail": "Mail me",
         "footer_follow": "Follow me",
         
@@ -95,11 +95,11 @@ const translations = {
 
         //work card
         "h2_work": "Moje práce...",
-        "work_text": "Provizorni text aaaaaa aaaaaaa aaaaaaaaaaa aaaa aa aaaaaa aaaaaa aaaaaaaa aaaa aaaa",
+        "work_text": "Kdybyste se mě zeptali, co rád fotím, neuměl bych odpovědět. Já prostě fotím, co mi zrovna přijde do cesty. Když jsem na horách tak přírodu nebo wild life, když ve městě tak street a architekturu, když se ocitnu na maturáku tak fotím prostě maturák. Zkrátka fotím vše, co se fotit dá i nedá.",
         "work_buttn": "Další",
         
         // Footer (společný pro všechny)
-        "footer_desc": "Provizorni text aaaaaa aaaaaaa aaaaaaaaaaa aaaa aa aaaaaa aaaaaa aaaaaaaa aaaa aaaa",
+        "footer_desc": "Tento web byl vytvořen v rámci školní práce a slouží především jako ukázka mých dovedností a osobního rozvoje. V případě zájmu o spolupráci mě neváhejte kontaktovat.",
         "footer_mail": "Napište mi",
         "footer_follow": "Sledujte mě",
         
