@@ -1202,10 +1202,13 @@ main{
   }
 }
 @media (max-width: 768px) {
-    .WiP h1 {
-        font-size: var(--h3-size);
+    .WiP div h1 {
+        font-size: calc(var(--h2-size)/1.5);
     }
-    .WiP{
+    .WiP div{   
         gap: 2px;
+    }
+    .WiP .WiPp{
+        margin: 0px 30px;
     }
 }
