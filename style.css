@@ -308,12 +308,13 @@ header{
 .animovany-txt .words span:nth-child(2) { animation-delay: 2s;}
 .animovany-txt .words span:nth-child(3) { animation-delay: 4s;}
 .animovany-txt .words span:nth-child(4) { animation-delay: 6s;}
+
 /* strucne info */
 .strucne-info{
-    display: flex;
-    flex-direction: column;
-    /* grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr); */
+    display: grid;
+    /* flex-direction: column; */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 10px;
     margin-top: 8vh;
     margin-left: 2vw;
