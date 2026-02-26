@@ -56,7 +56,10 @@ const translations = {
         "designe_idea": "2025 - Web designe idea",
 
         "wip": "Work in progress",
-        "wip_p": "(This is not loading, which means that I have not yet written my CV or uploaded it to the website)"
+        "wip_p": "(This is not loading, which means that I have not yet written my CV or uploaded it to the website)",
+
+        "gal": "Online Gallery",
+        "gal_btt": "All Photos"
     },
     cs: {
         // Menu
@@ -115,7 +118,10 @@ const translations = {
         "designe_idea": "2025 - Návrh webového designu",
 
         "wip": "Pracujeme na tom",
-        "wip_p": "(To se nenačítá, to znamená že jsem CV ještě nenapsal nebo jen nevložil na web)"
+        "wip_p": "(To se nenačítá, to znamená že jsem CV ještě nenapsal nebo jen nevložil na web)",
+
+        "gal": "Online Galerie",
+        "gal_btt": "Všechny Fotek"
     }
 };
 

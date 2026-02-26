@@ -53,7 +53,7 @@ header a{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 3vw;
 
     padding: 10px 20px;
     border-radius: 50px;
@@ -63,7 +63,7 @@ header a{
 
     position: fixed;
     top: 10px;
-    left: 20px;
+    left: 2vw;
 
     z-index: 100;
 
@@ -81,6 +81,16 @@ header a:hover{
     color: var(--bg-black);
     transform: scale(1.02);
 }
+
+/* galerie button */
+header a.gal_btt{
+    left: auto;
+    right: 2vw;
+    gap: 2vw;
+
+    animation: none;
+}
+
 
 /* nadpisi */
 .h2-effect{
