@@ -688,7 +688,7 @@ main{
 
     position: relative;
 
-    height: 150vh;
+    height: 165vh;
     min-height: 800px;
     margin-top: 15vh;
 
@@ -703,13 +703,46 @@ main{
 }
 .prace p{
     font-size: var(--p-size);
+    margin-bottom: 0;
 
-    margin: 0px 0px 0px 50px;
+    /* width: clamp(200px, 40vw, 50vw); */
+}
+/* odkaz */
+.prace a.gal_index_btt{
+    align-self: center;
 
+    margin: 0;
+
+    color: var(--font-white);
+    font-size: var(--p-size);
+    text-decoration: none;
+
+    padding: 5px 15px;
+    border-radius: 50px;
+
+    transition: var(--najeti);
+
+    background-color: var(--bg-transparent);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--box-shadow);
+    border: var(--bttn-border);
+}
+.prace .prace_text{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+
+    margin: 0px 0px 50px 50px;
     width: clamp(200px, 40vw, 50vw);
 }
+.prace a.gal_index_btt:hover{
+    background-color: var(--font-white);
+    color: var(--bg-black);
+    transform: scale(1.02);
+}
+
 /* obrazky */
-.prace div{
+.prace div:not(.prace_text, .bttn){
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -901,7 +934,7 @@ main{
 
 
 
-@media(max-width: 1000px){
+@media(max-width: 1025px){
     .code-img{
         display: none;
     }
@@ -1116,8 +1149,12 @@ main{
     }
     .prace p.text {
         width: 90%;
-        margin: 0 auto 40px auto;
+        margin: 0 auto 5px auto;
         text-align: center;
+    }
+    .prace .prace_text{
+        align-items: center;
+        width: auto;
     }
     .prace div.obdelnik,
     .prace div.ctverec,

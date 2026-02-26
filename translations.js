@@ -121,7 +121,7 @@ const translations = {
         "wip_p": "(To se nenačítá, to znamená že jsem CV ještě nenapsal nebo jen nevložil na web)",
 
         "gal": "Online Galerie",
-        "gal_btt": "Všechny Fotek"
+        "gal_btt": "Všechny Fotky"
     }
 };
 
